@@ -1,7 +1,9 @@
 @echo off
 cls
 :Gerador
-curl "https://www.random.org/strings/?num=10&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"
+set /p len=Numero de Senhas Geradas (maximo 100) :
+set /p digits=Tamanho da Senha (minimo 6, maximo 24):
+curl "https://www.random.org/strings/?num=%len%&len=%digits%&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new"
 echo.
 pause
 goto :Gerador
