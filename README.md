@@ -1,13 +1,21 @@
-# geradordesenha
-Gerador de senha em lote Bat 
-Este é um script em lote (batch) que pode ser usado para gerar senhas aleatórias usando o serviço online do Random.org. O script solicitará o número de senhas a serem geradas e o tamanho das senhas.
+# Gerador de Senhas Aleatórias
 
-O script começa limpando a tela usando o comando "cls". Em seguida, ele entra em um loop com a etiqueta "Gerador" usando o comando ":Gerador".
+Este script em lote foi desenvolvido para gerar senhas aleatórias com base nas preferências definidas pelo usuário. Ele utiliza a API do Random.org para gerar as senhas de forma segura e aleatória.
 
-Dentro do loop, ele solicita ao usuário o número de senhas a serem geradas e o tamanho das senhas. As respostas do usuário são armazenadas nas variáveis "len" e "digits" usando o comando "set /p".
+## Como utilizar
 
-Em seguida, ele usa o comando "curl" para fazer uma solicitação GET para a URL "https://www.random.org/strings/" com os parâmetros fornecidos. Essa URL gera senhas aleatórias com base nos parâmetros especificados, incluindo o número de senhas, o tamanho das senhas e as opções de caracteres (dígitos, letras maiúsculas e minúsculas). O resultado da solicitação é exibido na tela.
+1. Certifique-se de ter o CURL instalado em seu sistema.
+2. Abra o arquivo de script (.bat) em um editor de texto.
+3. Execute o script.
+4. Será exibida a mensagem "Número de Senhas Geradas (máximo 100):". Insira o número desejado de senhas a serem geradas (até 100).
+5. Será exibida a mensagem "Tamanho da Senha (mínimo 6, máximo 24):". Insira o tamanho desejado para as senhas (entre 6 e 24 caracteres).
+6. O script fará uma chamada à API do Random.org para gerar as senhas de acordo com as preferências fornecidas.
+7. As senhas geradas serão exibidas no console.
+8. Pressione qualquer tecla para encerrar o script.
 
-Depois de exibir as senhas geradas, ele pausa a execução usando o comando "pause" para que o usuário possa visualizar as senhas. Em seguida, ele volta ao início do loop usando o comando "goto :Gerador", permitindo que o usuário gere mais senhas se desejar.
+## Observações
 
-É importante mencionar que o script usa o comando "curl" para fazer a solicitação HTTP. Certifique-se de ter o "curl" instalado e configurado corretamente em seu sistema para que o script funcione corretamente.
+- Certifique-se de ter uma conexão com a internet para que o script possa acessar a API do Random.org.
+- A segurança das senhas geradas depende da qualidade da entropia fornecida pela API do Random.org.
+- O script utiliza caracteres alfanuméricos (maiúsculos e minúsculos) para gerar as senhas.
+- É importante garantir que as senhas geradas atendam aos requisitos de segurança necessários para sua aplicação específica.
